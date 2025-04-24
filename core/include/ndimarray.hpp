@@ -1,7 +1,12 @@
 #ifndef NDIMARRAY_HPP
 #define NDIMARRAY_HPP
 
-struct NDimArray {
+#include <cstdint>
+
+#include "dtypes.hpp"
+
+class NDimArray {
+public:
     int ndim;
     int64_t* shape;
     DTypeDesc *desc;
@@ -10,4 +15,4 @@ struct NDimArray {
     int flags;
 };
 
-#endif 
+#endif // NDIMARRAY_HPP
