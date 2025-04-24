@@ -3,7 +3,7 @@
 
 #include <inttypes.h>
 
-#ifndef FX_NOGLIBC
+#ifndef LOG_NOGLIBC
 
 #include <string.h>
 #include <errno.h>
@@ -56,7 +56,7 @@ void flush_early_log_buffer(int fd);
 
 #define pr_debug(fmt, ...) print_on_level(LOG_DEBUG, LOG_PREFIX fmt, ##__VA_ARGS__)
 
-#ifndef FA_NOGLIBC
+#ifndef LOG_NOGLIBC
 
 #define pr_perror(fmt, ...) pr_err(fmt ": %s\n", ##__VA_ARGS__, strerror(errno))
 
